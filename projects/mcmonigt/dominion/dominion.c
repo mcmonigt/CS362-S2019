@@ -5,12 +5,6 @@
 #include <math.h>
 #include <stdlib.h>
 
-int actionSmity(int currentPlayer, struct gameState *state, int handPos);
-int actionCouncil_room(int currentPlayer, struct gameState* state, int handPos);
-int actionTreasure_map(int currentPlayer, struct gameState* state, int handPos);
-int actionFeast(int currentPlayer, struct gameState* state, int choice1, int temphand[MAX_HAND]);
-int actionBaron(int currentPlayer, struct gameState* state, int choice1);
-int actionAdventurer(int drawntreasure, struct gameState *state, int currentPlayer, int temphand[MAX_HAND]);
 
 int compare(const void* a, const void* b) {
   if (*(int*)a > *(int*)b)
@@ -674,13 +668,13 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   switch( card )
     {
     case adventurer:
-      return actionAdventurer(drawntreasure, state, currentPlayer, temphand);
+      return actionAdventurer(drawntreasure, state, currentPlayer);
 
     case council_room:
       return actionCouncil_room(currentPlayer, state, handPos);
 
     case feast:
-      return actionFeast(currentPlayer, state, choice1, temphand);
+      return actionFeast(currentPlayer, state, choice1);
 
     case gardens:
       return -1;
@@ -747,7 +741,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 
     case smithy:
-      return actionSmity(currentPlayer, state, handPos);
+      return actionSmithy(currentPlayer, state, handPos);
 
     case village:
       //+1 Card
@@ -1164,7 +1158,8 @@ int updateCoins(int player, struct gameState *state, int bonus)
 }
 
 // adventurer = 7
-int actionAdventurer(int drawntreasure, struct gameState *state, int currentPlayer, int temphand[MAX_HAND]){
+int actionAdventurer(int drawntreasure, struct gameState *state, int currentPlayer){
+   int temphand[MAX_HAND];
   int z = 0;
   while (drawntreasure < 2){
     if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
@@ -1182,13 +1177,13 @@ int actionAdventurer(int drawntreasure, struct gameState *state, int currentPlay
     }
   }
   while(z-1>=0){
-    state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
+    // state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
     z=z-1;
   }
   return 0;
 }
 
-int actionSmity(int currentPlayer, struct gameState *state, int handPos){
+int actionSmithy(int currentPlayer, struct gameState *state, int handPos){
   //+3 Cards
   int i;
   for (i = 0; i < 3; i++){
@@ -1251,7 +1246,8 @@ int actionTreasure_map(int currentPlayer, struct gameState* state, int handPos){
   return -1;
 }
 
-int actionFeast(int currentPlayer, struct gameState* state, int choice1, int temphand[MAX_HAND]){
+int actionFeast(int currentPlayer, struct gameState* state, int choice1){
+  int temphand[MAX_HAND];
   //gain card with cost up to 5
   //Backup hand
   int i;

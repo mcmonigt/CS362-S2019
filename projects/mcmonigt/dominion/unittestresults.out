@@ -1,0 +1,212 @@
+unittest1
+player 0 should have 8 cards in hand and has 8
+player 0 should have 2 number of buys left and has 1
+1 out of 20 tests failed unittest1
+player 0 should have 11 cards in hand and has 11
+player 0 should have 3 number of buys left and has 1
+2 out of 20 tests failed unittest1
+player 0 should have 14 cards in hand and has 14
+player 0 should have 4 number of buys left and has 1
+3 out of 20 tests failed unittest1
+player 0 should have 17 cards in hand and has 17
+player 0 should have 5 number of buys left and has 1
+4 out of 20 tests failed unittest1
+player 0 should have 20 cards in hand and has 20
+player 0 should have 6 number of buys left and has 1
+5 out of 20 tests failed unittest1
+player 0 should have 23 cards in hand and has 23
+player 0 should have 7 number of buys left and has 1
+6 out of 20 tests failed unittest1
+player 0 should have 26 cards in hand and has 26
+player 0 should have 8 number of buys left and has 1
+7 out of 20 tests failed unittest1
+player 0 should have 29 cards in hand and has 29
+player 0 should have 9 number of buys left and has 1
+8 out of 20 tests failed unittest1
+player 0 should have 32 cards in hand and has 32
+player 0 should have 10 number of buys left and has 1
+9 out of 20 tests failed unittest1
+player 0 should have 35 cards in hand and has 35
+player 0 should have 11 number of buys left and has 1
+10 out of 20 tests failed unittest1
+Function 'main'
+Lines executed:83.33% of 24
+Branches executed:100.00% of 12
+Taken at least once:66.67% of 12
+Calls executed:70.00% of 10
+
+File 'unittest1.c'
+Lines executed:83.33% of 24
+Branches executed:100.00% of 12
+Taken at least once:66.67% of 12
+Calls executed:70.00% of 10
+Creating 'unittest1.c.gcov'
+
+
+unittest2
+Test failed unittest2: wrong number of cards in hand after calling actionSmithy
+Function 'main'
+Lines executed:77.27% of 22
+Branches executed:100.00% of 8
+Taken at least once:62.50% of 8
+Calls executed:61.54% of 13
+
+File 'unittest2.c'
+Lines executed:77.27% of 22
+Branches executed:100.00% of 8
+Taken at least once:62.50% of 8
+Calls executed:61.54% of 13
+Creating 'unittest2.c.gcov'
+
+
+unittest3
+All tests passed unittest3
+Function 'main'
+Lines executed:73.33% of 30
+Branches executed:100.00% of 16
+Taken at least once:68.75% of 16
+Calls executed:44.44% of 9
+
+File 'unittest3.c'
+Lines executed:73.33% of 30
+Branches executed:100.00% of 16
+Taken at least once:68.75% of 16
+Calls executed:44.44% of 9
+Creating 'unittest3.c.gcov'
+
+
+unittest4
+Test failed unittest4: feast card not trashed from hand
+Function 'main'
+Lines executed:80.77% of 26
+Branches executed:100.00% of 14
+Taken at least once:78.57% of 14
+Calls executed:50.00% of 8
+
+File 'unittest4.c'
+Lines executed:80.77% of 26
+Branches executed:100.00% of 14
+Taken at least once:78.57% of 14
+Calls executed:50.00% of 8
+Creating 'unittest4.c.gcov'
+
+cardtest1
+player 0 should have 7 cards in hand and has 7
+player 0 should have 9 cards in hand and has 9
+player 0 should have 11 cards in hand and has 11
+player 0 should have 13 cards in hand and has 12
+player 0 should have 15 cards in hand and has 14
+player 0 should have 17 cards in hand and has 16
+player 0 should have 19 cards in hand and has 18
+player 0 should have 21 cards in hand and has 19
+player 0 should have 23 cards in hand and has 20
+player 0 should have 25 cards in hand and has 21
+7 out of 10 test failed cardtest1
+Function 'main'
+Lines executed:87.50% of 24
+Branches executed:100.00% of 8
+Taken at least once:75.00% of 8
+Calls executed:70.00% of 10
+
+File 'cardtest1.c'
+Lines executed:87.50% of 24
+Branches executed:100.00% of 8
+Taken at least once:75.00% of 8
+Calls executed:70.00% of 10
+Creating 'cardtest1.c.gcov'
+
+cardtest2
+player 0 should have 9 in hand and has 4
+player 0 should have 13 in hand and has 3
+player 0 should have 17 in hand and has 2
+player 0 should have 21 in hand and has 1
+player 0 should have 25 in hand and has 0
+player 0 should have 29 in hand and has -1
+player 0 should have 33 in hand and has -2
+player 0 should have 37 in hand and has -3
+player 0 should have 41 in hand and has -4
+player 0 should have 45 in hand and has -5
+cardtest2 failed 10 out of 10 tests
+Function 'main'
+Lines executed:88.46% of 26
+Branches executed:100.00% of 10
+Taken at least once:70.00% of 10
+Calls executed:70.00% of 10
+
+File 'cardtest2.c'
+Lines executed:88.46% of 26
+Branches executed:100.00% of 10
+Taken at least once:70.00% of 10
+Calls executed:70.00% of 10
+Creating 'cardtest2.c.gcov'
+
+cardtest3
+player 0 should have: 5 cards in hand and it has 5
+player 0 should have: 3 actions and has 3
+player 0 should have: 5 cards in hand and it has 5
+player 0 should have: 5 actions and has 5
+player 0 should have: 5 cards in hand and it has 5
+player 0 should have: 7 actions and has 7
+player 0 should have: 5 cards in hand and it has 5
+player 0 should have: 9 actions and has 9
+player 0 should have: 5 cards in hand and it has 5
+player 0 should have: 11 actions and has 11
+player 0 should have: 5 cards in hand and it has 5
+player 0 should have: 13 actions and has 13
+player 0 should have: 5 cards in hand and it has 5
+player 0 should have: 15 actions and has 15
+player 0 should have: 5 cards in hand and it has 5
+player 0 should have: 17 actions and has 17
+player 0 should have: 5 cards in hand and it has 5
+player 0 should have: 19 actions and has 19
+player 0 should have: 5 cards in hand and it has 5
+player 0 should have: 21 actions and has 21
+All tests passed cardtest3
+Function 'main'
+Lines executed:81.48% of 27
+Branches executed:100.00% of 10
+Taken at least once:60.00% of 10
+Calls executed:70.00% of 10
+
+File 'cardtest3.c'
+Lines executed:81.48% of 27
+Branches executed:100.00% of 10
+Taken at least once:60.00% of 10
+Calls executed:70.00% of 10
+Creating 'cardtest3.c.gcov'
+
+cardtest4
+player 0 should have 5 cards in hand and has 5
+player 0 should have 2 actions and has 2
+player 0 should have 5 cards in hand and has 5
+player 0 should have 3 actions and has 3
+player 0 should have 5 cards in hand and has 5
+player 0 should have 4 actions and has 4
+player 0 should have 5 cards in hand and has 5
+player 0 should have 5 actions and has 5
+player 0 should have 5 cards in hand and has 5
+player 0 should have 6 actions and has 6
+player 0 should have 5 cards in hand and has 5
+player 0 should have 7 actions and has 7
+player 0 should have 5 cards in hand and has 5
+player 0 should have 8 actions and has 8
+player 0 should have 5 cards in hand and has 5
+player 0 should have 9 actions and has 9
+player 0 should have 5 cards in hand and has 5
+player 0 should have 10 actions and has 10
+player 0 should have 5 cards in hand and has 5
+player 0 should have 11 actions and has 11
+All tests passed cardtest4
+Function 'main'
+Lines executed:81.48% of 27
+Branches executed:100.00% of 10
+Taken at least once:60.00% of 10
+Calls executed:70.00% of 10
+
+File 'cardtest4.c'
+Lines executed:81.48% of 27
+Branches executed:100.00% of 10
+Taken at least once:60.00% of 10
+Calls executed:70.00% of 10
+Creating 'cardtest4.c.gcov'
+

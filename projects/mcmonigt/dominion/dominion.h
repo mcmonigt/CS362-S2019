@@ -85,7 +85,7 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
 		   struct gameState *state);
 /* Responsible for initializing all supplies, and shuffling deck and
    drawing starting hands for all players.  Check that 10 cards selected
-   are in fact (different) kingdom cards, and that numPlayers is valid. 
+   are in fact (different) kingdom cards, and that numPlayers is valid.
 
 Cards not in game should initialize supply position to -1 */
 
@@ -127,5 +127,15 @@ int scoreFor(int player, struct gameState *state);
 int getWinners(int players[MAX_PLAYERS], struct gameState *state);
 /* Set array position of each player who won (remember ties!) to
    1, others to 0 */
+
+
+// function prototypes from refactoring code - assignment2
+int actionSmithy(int currentPlayer, struct gameState *state, int handPos);
+int actionCouncil_room(int currentPlayer, struct gameState* state, int handPos);
+int actionTreasure_map(int currentPlayer, struct gameState* state, int handPos);
+int actionFeast(int currentPlayer, struct gameState* state, int choice1);
+int actionBaron(int currentPlayer, struct gameState* state, int choice1);
+int actionAdventurer(int drawntreasure, struct gameState *state, int currentPlayer);
+
 
 #endif
