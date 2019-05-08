@@ -9,7 +9,7 @@
 // Testing actionSmithy function
 int main(){
   int player1 = 0;
-  // arbitratily chose card #3 in the array as the handPos argument
+  // arbitratily chose card number 3 in the array as the handPos argument
   int handPos = 3;
   struct gameState* game1 = newGame();
   struct gameState* game2 = newGame();
@@ -26,23 +26,27 @@ int main(){
     exit(1);
   }
 
-  // performing functionality of actionSmithy with game1
   int i;
-  for (i = 0; i < 3; i++){
-    drawCard(player1, game1);
+  int marker = 0;
+  for (i = 1; i <= 10; i++){
+    actionSmithy(player1, game1, handPos);
+    int j;
+    // discards 4 cards from hand and adds 4 cards to deck to make sure there's
+    // enough cards to draw in actionSmithy function
+    for (j = 0; j < 4; j++){
+      discardCard(handPos, player1, game1, 0);
+      gainCard(i, game1, 1, player1);
+    }
+    printf("player 0 should have %d in hand and has %d\n", (5+(i*4)), game1->handCount[player1]);
+    if (game1->handCount[player1] != 5 + (i*4)){
+      marker++;
+    }
   }
-  discardCard(handPos, player1, game1, 0);
-
-  // call actionSmithy using game2
-  actionSmithy(player1, game2, handPos);
-
-  // compare results
-  if (game1->handCount[player1] != game2->handCount[player1]){
-    printf("Test failed unittest2: wrong number of cards in hand after calling actionSmithy\n");
+  if (marker == 0){
+    printf("All test passed cardtest2\n");
   }
   else {
-    printf("Test passed for unittest2\n");
+    printf("cardtest2 failed %d out of 10 tests\n", marker);
   }
   return 0;
-
 }
