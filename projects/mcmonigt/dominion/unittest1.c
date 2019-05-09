@@ -36,12 +36,12 @@ int main(){
     if (1 + i != game1->numBuys){
       marker++;
     }
-    if (marker == 0){
-      printf("All tests passed unittest1\n");
-    }
-    else {
-      printf("%d out of 20 tests failed unittest1\n", marker);
-    }
+  }
+  if (marker == 0){
+    printf("All tests passed unittest1\n");
+  }
+  else {
+    printf("%d out of 20 tests failed unittest1\n", marker);
   }
 
   return 0;

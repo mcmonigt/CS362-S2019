@@ -12,7 +12,6 @@ int main(){
   // arbitratily chose card number 3 in the array as the handPos argument
   int handPos = 3;
   struct gameState* game1 = newGame();
-  struct gameState* game2 = newGame();
   int game_initialized;
   int cards[10] = { adventurer, village, smithy, council_room, feast, gardens, mine, minion, treasure_map };
   game_initialized = initializeGame(2, cards, 3, game1);
@@ -20,12 +19,6 @@ int main(){
     printf("game not intialized correctly\n");
     exit(1);
   }
-  game_initialized = initializeGame(2, cards, 3, game2);
-  if (game_initialized != 0){
-    printf("game not intialized correctly\n");
-    exit(1);
-  }
-
   int i;
   int marker = 0;
   for (i = 1; i <= 10; i++){

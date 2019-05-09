@@ -6,10 +6,9 @@
 #include <stdlib.h>
 #include <assert.h>
 
-// testing actionFeast function 
+// testing actionFeast function
 int main(){
   int player1 = 0;
-  int handPos = 0;
   struct gameState* game1 = newGame();
   int game_initialized;
   int cards[10] = { adventurer, village, smithy, council_room, feast, gardens, mine, minion, treasure_map };
@@ -18,30 +17,29 @@ int main(){
     printf("game not intialized correctly\n");
     exit(1);
   }
-  // sets fest card to be in handPos in hand
-  game1->hand[player1][handPos] = feast;
-  // calling actionFeast on game1 player1
-  int marker = 0;
-  int marker2 = 0;
-  actionFeast(player1, game1, smithy);
+
   int i;
-  for (i = 0; i < game1->deckCount[player1]; i++){
-    if (game1->deck[player1][i] == smithy){
-      marker = 1;
+  int marker2 = 0;
+  for (i = 1; i <= 10; i++){
+    int marker = 0;
+    actionFeast(player1, game1, smithy);
+    // printf("loop %d cards in hand after call: %d\n", i, game1->handCount[player1]);
+    int j;
+    for (j = 0; j < game1->deckCount[player1]; j++){
+      if (game1->deck[player1][j] == smithy){
+        marker++;
+      }
     }
-  }
-  if (marker == 0){
-    printf("Test failed unittest4: card not gained to deck\n");
-    marker2++;
-  }
-  for (i = 0; i < game1->handCount[player1]; i++){
-    if (game1->hand[player1][i] == feast){
-      printf("Test failed unittest4: feast card not trashed from hand\n");
+    printf("player should have %d smithys in hand and has %d\n", i, marker);
+    if (marker != i){
       marker2++;
     }
   }
   if (marker2 == 0){
-    printf("All tests passed unittest4\n");
+    printf("All test passed unittest4\n");
+  }
+  else {
+    printf("%d out of 10 test failed\n", marker2);
   }
   return 0;
 }
