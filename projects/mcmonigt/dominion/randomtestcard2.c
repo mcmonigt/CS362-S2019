@@ -12,9 +12,7 @@ int checkSmithyCard(struct gameState* game1, int currentPlayer){
   struct gameState game2;
   memcpy(&game2, game1, sizeof(struct gameState));
   // calls actionSmithy function for one copy of the gameState
-  printf("calling actionsmity card\n");
   actionSmity(currentPlayer, game1, 0);
-  printf("passed call to actionsmity\n");
   // manually does what actionSmithy function should do
   int i;
   for (i = 0; i < 3; i++){
@@ -43,7 +41,9 @@ int main(){
     // sets discardCount to a random number less than three less than MAX to allow space for drawing 3 cards
     game1.discardCount[p] = floor(Random() * (MAX_DECK - 3));
     // makes sure there's space to draw three cards
-    game1.handCount[p] = floor(Random() * (MAX_HAND + 3));
+    game1.handCount[p] = floor(Random() * (MAX_HAND - 3));
+    // makes sure there's at least one space for discardCard function
+    game1.playedCardCount = floor(Random() * (MAX_HAND - 1));
 
     checkSmithyCard(&game1, p);
 

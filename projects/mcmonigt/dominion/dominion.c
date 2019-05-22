@@ -1064,11 +1064,11 @@ int discardCard(int handPos, int currentPlayer, struct gameState *state, int tra
   if (trashFlag < 1)
     {
       //add card to played pile
-      printf("%d\n", state->playedCardCount);
+      // printf("%d\n", state->playedCardCount);
       state->playedCards[state->playedCardCount] = state->hand[currentPlayer][handPos];
       state->playedCardCount++;
     }
-    printf("passed first if\n");
+    // printf("passed first if\n");
 
   //set played card to -1
   state->hand[currentPlayer][handPos] = -1;
@@ -1212,11 +1212,11 @@ int actionSmity(int currentPlayer, struct gameState *state, int handPos){
   for (i = 0; i < 3; i++){
     drawCard(currentPlayer, state);
   }
-  printf("passed drawcard loop\n");
+  // printf("passed drawcard loop\n");
   //discard card from hand
   // Bug
   discardCard(handPos, currentPlayer, state, 0);
-  printf("exiting actionsmity\n");
+  // printf("exiting actionsmity\n");
   return 0;
 }
 

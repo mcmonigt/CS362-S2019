@@ -9,12 +9,10 @@
 #include "rngs.h"
 
 int checkAdventureCard(struct gameState* game1, int currentPlayer){
-  // printf("entering checkAdventureCard\n");
   struct gameState game2;
   memcpy(&game2, game1, sizeof(struct gameState));
   //calls actionAdventurer function for one copy of gameState
   actionAdventurer(0, game1, currentPlayer);
-  // printf("passed call to actionAdventurer\n");
   // manually does what actionAdventurer function should do
   int temphand[MAX_HAND];
   int drawntreasure = 0;
@@ -58,7 +56,7 @@ int main(){
     game1.deckCount[p] = floor(Random() * (MAX_DECK - 2)) + 2;
     // initializes discardCount to zero to avoid going over MAX_HAND value in array
     game1.discardCount[p] = 0;
-    game1.handCount[p] = floor(Random() * MAX_HAND);
+    game1.handCount[p] = floor(Random() * (MAX_HAND - 2));
     // adding treasures to random positions in the deck to make sure there's some in there
     game1.deck[p][game1.deckCount[p] - 1] = 5;
     game1.deck[p][game1.deckCount[p] - 2] = 5;

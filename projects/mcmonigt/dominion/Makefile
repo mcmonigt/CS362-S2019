@@ -51,7 +51,7 @@ randomtestresults: randomtestadventurer randomtestcard1 randomtestcard2
 	echo "randomtestcard1" >> randomtestresults.out
 	./randomtestcard1 >> randomtestresults.out
 	gcov randomtestcard1.c >> randomtestresults.out
-	gcov -b -f dominion.c >> randomtestresults.out
+	# gcov -b -f dominion.c >> randomtestresults.out
 	echo "" >> randomtestresults.out
 	echo "randomtestcard2" >> randomtestresults.out
 	./randomtestcard2 >> randomtestresults.out
