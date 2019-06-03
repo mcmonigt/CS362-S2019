@@ -1,0 +1,52 @@
+cards in hand 5
+player 0 should have 4 in hand and has 4
+player 0 should have 3 in hand and has 3
+player 0 should have 2 in hand and has 2
+player 0 should have 1 in hand and has 1
+player 0 should have 0 in hand and has 0
+player 0 should have -1 in hand and has -1
+player 0 should have -2 in hand and has -2
+player 0 should have -3 in hand and has -3
+player 0 should have -4 in hand and has -4
+player 0 should have -5 in hand and has -5
+All test passed unittest2
+Function 'main'
+Lines executed:82.61% of 23
+Branches executed:100.00% of 10
+Taken at least once:70.00% of 10
+Calls executed:72.73% of 11
+
+File 'unittest2.c'
+Lines executed:82.61% of 23
+Branches executed:100.00% of 10
+Taken at least once:70.00% of 10
+Calls executed:72.73% of 11
+Creating 'unittest2.c.gcov'
+
+
+cardtest1
+player 0 should have 7 cards in hand and has 10
+player 0 should have 9 cards in hand and has 12
+player 0 should have 11 cards in hand and has 14
+player 0 should have 13 cards in hand and has 16
+player 0 should have 15 cards in hand and has 18
+player 0 should have 17 cards in hand and has 20
+player 0 should have 19 cards in hand and has 22
+player 0 should have 21 cards in hand and has 24
+player 0 should have 23 cards in hand and has 26
+player 0 should have 25 cards in hand and has 28
+10 out of 10 test failed cardtest1
+Function 'main'
+Lines executed:87.50% of 24
+Branches executed:100.00% of 8
+Taken at least once:62.50% of 8
+Calls executed:70.00% of 10
+
+File 'cardtest1.c'
+Lines executed:87.50% of 24
+Branches executed:100.00% of 8
+Taken at least once:62.50% of 8
+Calls executed:70.00% of 10
+Creating 'cardtest1.c.gcov'
+
+cardtest2
